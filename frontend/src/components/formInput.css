@@ -2,18 +2,18 @@
   display: flex;
   flex-direction: column;
   width: 280px;
+  background-color: yellow;
 }
-.inputOuter {
-  padding: 15px;
+.in {
   margin: 10px 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
   border: 1px solid gray;
   border-radius: 5px;
-}
-input {
-  border: none;
-  width: 100%;
   outline: none;
 }
+
 label {
   font-size: 12px;
   color: gray;
@@ -24,9 +24,14 @@ span {
   color: red;
   display: none;
 }
-.inputOuter:invalid[focused='true'] {
+
+input:invalid[focused='true'] {
   border: 1px solid red;
 }
 input:invalid[focused='true'] ~ span {
   display: block;
+}
+.inputOuter {
+  width: 100%;
+  background-color: red;
 }

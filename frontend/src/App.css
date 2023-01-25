@@ -37,3 +37,6 @@ button {
 button:hover {
   background-color: rgb(34, 34, 165);
 }
+.showIcon {
+  cursor: pointer;
+}

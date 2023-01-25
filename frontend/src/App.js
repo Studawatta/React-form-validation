@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import FormInput from './components/FormInput';
-import { AiOutlineEye } from 'react-icons/ai';
+
 function App() {
   const [values, setValues] = useState({
     username: '',
@@ -9,8 +9,8 @@ function App() {
     birthday: '',
     password: '',
     confirmPassword: '',
-    showPassword: true,
   });
+
   const inputs = [
     {
       id: 1,
@@ -35,19 +35,18 @@ function App() {
     {
       id: 3,
       name: 'birthday',
-      type: 'date',
+      type: 'text',
       placeholder: 'Birthday',
       label: 'Birthday',
     },
     {
       id: 4,
       name: 'password',
-      type: `${values.showPassword ? 'text' : 'password'}`,
+      type: 'password',
       placeholder: 'Password',
       errorMessage:
         'Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!',
       label: 'Password',
-      end: <AiOutlineEye />,
       pattern: '^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$',
       required: true,
     },
@@ -83,6 +82,7 @@ function App() {
             onChange={onChange}
           />
         ))}
+
         <button>submit</button>
       </form>
     </div>
